@@ -1,0 +1,4 @@
+e_store_blog:
+    resource: "@eStoreBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
