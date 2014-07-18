@@ -5,3 +5,7 @@ e_store_blog_homepage:
 e_store_blog_login:
     path: /login
     defaults: {_controller: eStoreBlogBundle:Default:login}
+
+e_store_blog_new_post:
+    path: /post/new
+    defaults: { _controller: eStoreBlogBundle:Blog:new }
