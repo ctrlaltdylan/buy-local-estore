@@ -1,3 +1,7 @@
 e_store_blog_homepage:
     path:     /
     defaults: { _controller: eStoreBlogBundle:Default:index }
+
+e_store_blog_login:
+    path: /login
+    defaults: {_controller: eStoreBlogBundle:Default:login}

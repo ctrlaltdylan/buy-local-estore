@@ -1,0 +1,82 @@
+{# app/Resources/views/base.html.twig #}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Drink it before it's Cool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% stylesheets 'bundles/estoreblog/css/*' filter = 'cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+
+</head>
+
+<body>
+
+    <div class="brand">Drink before it's Cool</div>
+    <div class="address-bar">The Piazza | 5483 Not Mainstreet St. | Philadephia, PA 191252 | 555.519.2013</div>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Business Casual</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="about.html">About</a>
+                    </li>
+                    <li><a href="blog.html">Store</a>
+                    </li>
+                    <li><a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        {% block content %}{% endblock %}
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Compay 2013</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Javascripts for the Blog Bundle-->
+    {% javascripts '@eStoreBlogBundle/Resources/public/js/*' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script>
+    // Activates the Carousel
+    $('.carousel').carousel({
+        interval: 5000
+    })
+    </script>
+</body>
+</html>

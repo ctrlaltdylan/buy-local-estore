@@ -8,6 +8,11 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('eStoreBlogBundle:Default:index.html.twig');
+        return $this->render('eStoreBlogBundle:Default:home.html.twig');
+    }
+
+    public function loginAction()
+    {
+    	return $this->render('eStoreBlogBundle:Auth:login.html.twig');
     }
 }
