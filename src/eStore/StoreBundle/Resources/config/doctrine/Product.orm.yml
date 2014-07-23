@@ -1,0 +1,19 @@
+eStore\StoreBundle\Entity\Product:
+    type: entity
+    table: Product
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '50'
+        price:
+            type: float
+        description:
+            type: text
+
+    lifecycleCallbacks: {  }

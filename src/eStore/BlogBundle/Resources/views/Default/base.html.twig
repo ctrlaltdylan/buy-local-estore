@@ -34,26 +34,51 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            {# <div class="collapse navbar-collapse navbar-ex1-collapse"> #}
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ path('e_store_blog_homepage')}}">Home</a>
+                    <li><a href = "{{ path('e_store_blog_homepage')}}">Home</a></li>
+                    <li class = 'dropdown'>
+                        <a href="#" class = 'dropdown-toggle' data-toggle='dropdown'>
+                            Blog <span class = 'caret'></span>
+                        </a>
+
+                        <ul class = 'dropdown-menu' role = 'menu'>
+                            <li><a href = "{{ path('e_store_blog_posts')}}">Posts</a></li>
+                            <li><a href="{{ path('e_store_blog_new_post')}}">New Post</a></li>
+                        </ul>     
                     </li>
                     <li><a href="about.html">About</a>
                     </li>
-                    <li><a href="blog.html">Store</a>
+                    <li><a href="{{ path('e_store_store_homepage')}}">Store</a>
                     </li>
                     <li><a href="contact.html">Contact</a>
                     </li>
+                    <li><a href = "{{ path('fos_user_security_login') }}">Sign In</a>
+                    </li>
                 </ul>
-            </div>
+            {# </div> #}
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
 
     <div class="container">
+        
+        <div class = 'row'>
+            <div class = 'box'>
+                <div class = 'col-lg-12 text-center'>
+                    <h2>{% block title %}{% endblock %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'box'>
+                <div class = 'col-lg-12'>
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
 
-        {% block content %}{% endblock %}
     </div>
     <!-- /.container -->
 

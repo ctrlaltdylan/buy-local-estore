@@ -1,0 +1,11 @@
+{% extends "eStoreBlogBundle:Default:base.html.twig" %}
+
+{% block title %}Category Listing{% endblock %}
+
+{% block body %}
+
+	{% for category in categories %}
+		{{ category.name}}
+	{% endfor %}
+	
+{% endblock %}

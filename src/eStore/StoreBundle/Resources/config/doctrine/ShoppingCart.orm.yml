@@ -1,0 +1,15 @@
+eStore\StoreBundle\Entity\ShoppingCart:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+
+    oneToOne:
+        user:
+            targetEntity: eStore\UserBundle\Entity\User
+            inversedBy: shoppingcart
+    lifecycleCallbacks: {  }

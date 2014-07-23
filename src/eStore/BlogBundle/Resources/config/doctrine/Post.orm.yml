@@ -13,4 +13,14 @@ eStore\BlogBundle\Entity\Post:
             length: '50'
         body:
             type: text
+
+
+    manyToOne:
+       user:
+           targetEntity: eStore\UserBundle\Entity\User
+           inversedBy: posts
+           joinColumn:
+              name: user_id
+              referencedColumnName: id
+
     lifecycleCallbacks: {  }

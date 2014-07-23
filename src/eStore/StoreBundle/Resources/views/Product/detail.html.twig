@@ -1,0 +1,11 @@
+{% extends('eStoreBlogBundle:Default:base.html.twig')%}
+
+{% block title %}{{ product.name }}{%endblock%}
+
+{% block content %}
+
+	{{product.name}}
+	{{product.description}}
+	{{product.price}}
+
+{% endblock %}

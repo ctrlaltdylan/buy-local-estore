@@ -1,0 +1,23 @@
+e_store_store_homepage:
+    path:     /store
+    defaults: { _controller: eStoreStoreBundle:Default:index }
+
+e_store_product_create:
+    path:     /store/product/create
+    defaults: { _controller: eStoreStoreBundle:Product:create }
+
+e_store_product_index:
+    path:     /store/product
+    defaults: { _controller: eStoreStoreBundle:Product:index }
+
+e_store_product_edit:
+    path:     /store/product/edit
+    defaults: { _controller: eStoreStoreBundle:Product:edit }
+
+e_store_product_delete:
+    path:     /store/product/delete
+    defaults: { _controller: eStoreStoreBundle:Product:delete }
+
+e_store_product_detail:
+    path:     /store/product/{product}
+    defaults: { _controller: eStoreStoreBundle:Product:detail }

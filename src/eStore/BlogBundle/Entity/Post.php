@@ -25,6 +25,10 @@ class Post
     private $body;
 
 
+    public function __construct()
+    {
+
+    }
     /**
      * Get id
      *
@@ -80,4 +84,39 @@ class Post
     {
         return $this->body;
     }
+    /**
+     * @var \eStore\BlogBundle\Entity\User
+     */
+    private $category;
+
+
+
+    /**
+     * Set user
+     *
+     * @param \eStore\BlogBundle\Entity\User $user
+     * @return Post
+     */
+    public function setUser(\eStore\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \eStore\BlogBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+    /**
+     * @var \eStore\BlogBundle\Entity\User
+     */
+    private $user;
+
+
 }

@@ -1,3 +1,13 @@
+e_store_store:
+    resource: "@eStoreStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+e_store_user:
+    resource: "@eStoreUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
 e_store_blog:
     resource: "@eStoreBlogBundle/Resources/config/routing.yml"
     prefix:   /

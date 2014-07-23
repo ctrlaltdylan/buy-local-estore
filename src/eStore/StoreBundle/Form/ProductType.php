@@ -1,12 +1,12 @@
 <?php
 
-namespace eStore\BlogBundle\Form;
+namespace eStore\StoreBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class PostType extends AbstractType
+class ProductType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -15,9 +15,10 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('body')
-            ->add('create', 'submit')
+            ->add('name')
+            ->add('price')
+            ->add('description')
+            ->add('Create', 'submit')
         ;
     }
     
@@ -27,7 +28,7 @@ class PostType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'eStore\BlogBundle\Entity\Post'
+            'data_class' => 'eStore\StoreBundle\Entity\Product'
         ));
     }
 
@@ -36,6 +37,6 @@ class PostType extends AbstractType
      */
     public function getName()
     {
-        return 'estore_blogbundle_post';
+        return 'estore_storebundle_product';
     }
 }
